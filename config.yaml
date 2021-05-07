@@ -1,0 +1,13 @@
+key: DRpBBgiUIZxRUXrqdpHFLFlhieydtk1PqiMtqFiNjVGH5qTeOHyYllKUWg16EiHluy/12SK7sczhIUuifGJxgPjSid5+O5THdb0xaiH5C+Kw39kqOr2BHMtvkmnqrIYchjDJeMtOSZrRcPFfMKIVfY3PKgHIzY9FZ9XBB7Hh943TghZqrtsnpcMUMlBuFUAe8sfo+Q7ayuys8A3oFlExKXivgymhfay7OmGP5TRkc1maTkARWjrI9eb+QKrdn1DTqCq5r6Rdq4ADhRSERBtKJOBqlUHTkENOPeEO09kcb5RsXRcdEyPlMT+q3/QGvQxl5ktvt0KWm2PWP5/62K160lkR4O6nP8Wy06DebzuCjHo6DjzjN0r/rZR6A3uB87Lz8Ocvofyd1EaH16EfDPgor4UA0bgAxZ/JFYveBcP1OrxhZSzmoZFbSW0T81xv8sSZUN55ys0gjvNTHCYTtV4a9Z6MWMUltw1BETksq4EIo6T6wgr36/8YylQRzdgkl+/o2j0Mvox2EQhjDQZ+dTG66SH0ibu/y5vnSZS0Bgn+20tJnFnnoIK5iJBMWYOTcZLLE95wwXyBRJ+2oNO9DFhhvKD3OCJOwQgAJZ/R4p51MwFQccg2Et5m/yOAUSFk4RVvwWGDgOOenMA63Ue8S9AC04UsrTEkRWhwoRN1wGDpH7s=
+metrics:
+  plugins:
+  - name: jvmjolokia
+    enabled: true
+    interval: 300
+    config:
+      ip: 127.0.0.1
+      protocol: http
+      port: 8778
+      context: jolokia
+      monitorDeadlocks: false
+      deadLockMonitoringInterval: 300
