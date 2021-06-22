@@ -1,0 +1,20 @@
+key: RAVQ2V4umZtuqWI9P6ukaXyDFuMq6n8dC7T6kGYqJJNAX61vxmT2EtlnU9rS8fysmGO9kL5nGz7kWiyDWafgfhMca/D4HqCbme0+tohvnqR2uk6uAOMScUGy6vGR2cqAD8j+PcgVCaLHIRvMlHL5YtRbB3Z+SilyFNkjopxNPDADvHKG6OJnvO1jFCIGlXK9L0eVVXuiZOTx616FMCdxdugCbJehJDBAMrSELtsrNsimVEDcENOwBy9OUP0Sk77gTniW7Pe/nAJQtVJ/6y0N3Q2AnTKqqp6Y6eghR6P5FQkWyIMEhfkntGAXpNaJpkGFkOlzZnUfWV8pUt5OzmQhNpW+9A+dr2r5B5saTc8N+7Rup82W8OLFijbshvsJyviADnxinVS8IFgZcw8PrwcEy/+RI9UiCaHa2TR0WyXPjEhKaj3xTWPUkuH7igBUAjYaZ+FcWiRdGr1vIFYz+bsv5Mg0DZRg4TGLSJc+P/w1CpF/AXoVmqvIMEzP/74YF/FPiULW0ykRVGINFK3u3QVmcxEKbFE8KTY1EtPsl+isFXw8Juyr5ZoseREv2VisNsGOphZQFzfXoUi1ma+qVpdYByrwdFCPjb7XuibsTHfj+fLgzDD49ouGNhYm+TVwN524B4t+uR3iarECDii+kBa+1r+hevMwp309jw9r3HqeTmU=
+tags:
+  Name: test
+  appName: test
+  projectName: test-sfagent
+metrics:
+  plugins:
+    - name: linux
+      enabled: true
+      interval: 30
+logging:
+  plugins:
+    - name: linux-syslog
+      enabled: true
+      config:
+        log_level:
+          - error
+          - warning
+          - info
+        log_path: /var/log/syslog,/var/log/auth.log,/var/log/messages,/var/log/secure
