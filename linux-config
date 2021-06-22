@@ -2,7 +2,7 @@ key: RAVQ2V4umZtuqWI9P6ukaXyDFuMq6n8dC7T6kGYqJJNAX61vxmT2EtlnU9rS8fysmGO9kL5nGz7
 tags:
   Name: test
   appName: test
-  projectName: ebs-new-test
+  projectName: ebs-new-test-1
 metrics:
   plugins:
     - name: linux
