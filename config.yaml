@@ -17,8 +17,7 @@ metrics:
           port: 8778
           context: jolokia
           monitorDeadlocks: false
-          deadLockMonitoringInterval: 300
-alias: java-ct          
+          deadLockMonitoringInterval: 300       
 logging:
   plugins:
     - name: linux-syslog
