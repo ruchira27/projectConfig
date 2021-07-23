@@ -1,13 +1,24 @@
-key: RAVQ2V4umZtuqWI9P6ukaXyDFuMq6n8dC7T6kGYqJJNAX61vxmT2EtlnU9rS8fysmGO9kL5nGz7kWiyDWafgfhMca/D4HqCbme0+tohvnqR2uk6uAOMScUGy6vGR2cqAD8j+PcgVCaLHIRvMlHL5YtRbB3Z+SilyFNkjopxNPDADvHKG6OJnvO1jFCIGlXK9L0eVVXuiZOTx616FMCdxdugCbJehJDBAMrSELtsrNsimVEDcENOwBy9OUP0Sk77gTniW7Pe/nAJQtVJ/6y0N3Q2AnTKqqp6Y6eghR6P5FQkWyIMEhfkntGAXpNaJpkGFkOlzZnUfWV8pUt5OzmQhNpW+9A+dr2r5B5saTc8N+7Rup82W8OLFijbshvsJyviADnxinVS8IFgZcw8PrwcEy/+RI9UiCaHa2TR0WyXPjEhKaj3xTWPUkuH7igBUAjYaZ+FcWiRdGr1vIFYz+bsv5Mg0DZRg4TGLSJc+P/w1CpF/AXoVmqvIMEzP/74YF/FPiULW0ykRVGINFK3u3QVmcxEKbFE8KTY1EtPsl+isFXw8Juyr5ZoseREv2VisNsGOphZQFzfXoUi1ma+qVpdYByrwdFCPjb7XuibsTHfj+fLgzDD49ouGNhYm+TVwN524B4t+uR3iarECDii+kBa+1r+hevMwp309jw9r3HqeTmU=
+key: oxo7Q9c6uF3XRWynWCvu4vw1rOjsD/h5LsOGqiW0fddA8ocPbE6/0ikToQ1Qr6Q4mIcAjFMICYxiv2VuSbTuuPG72XFqo/bF8WM/nvcnjRspLpv5aU47xsOcx8EtP+A4fgefQ1S5v0k71aF0wysNhgdPJksoh4pqOjoeYq+9V9bPlLHJCqH/mZHxZO2JJyzJeY3WO/8/IyDSd9vFFUTPk2q0MM1at25TMjfqNeGX3rxy7q6pVpSmkVV7vy/TxzkeZfujucQKFpIIOmRZZSMzm8scWk2wSjkPcrxuCjUiNiv4kc9M5iejGfYEnuygll3ZcfGjfoNPXiUSKZiVJszWZ3X+w1EcxHujbYwMi83BMdsmULMu/FPj4EHz490RUe6W/mTKT72UEgqT09eVvqSfER9rO4ZOJeCePlWzGa3hOmrvqE1Yt7D3/it+R1QwTvMWr3tqaDrb2ivYqxGQ1u79BQi1pFLT+rbWqK/BpWt678JQ1Z+vua/Iyz6eueGaBuO/Cwh/B4/X3KOEbwfG3j261rR5RBRmnaC5fVsZABBXltzwA+eFC7MDXuQBbcG1LiuCV/CLRwNJw91eiDVMqBaG/7Uef7zwsa6FEEa72jiXtZMU9YpIvrGLkDZmLooGN68Zv3/31vNoanfHbUErcYfSHjr7mBHXrY9YQRDDWcXn8C8=
 tags:
   Name: test
   appName: test
-  projectName: ebs-test
+  projectName: ecs-test
 metrics:
   plugins:
     - name: linux
       enabled: true
       interval: 30
+    - name: jvmjolokia
+        enabled: true
+        interval: 300
+        config:
+          ip: 127.0.0.1
+          protocol: http
+          port: 8778
+          context: jolokia
+          monitorDeadlocks: false
+          deadLockMonitoringInterval: 300
+alias: java-ct          
 logging:
   plugins:
     - name: linux-syslog
