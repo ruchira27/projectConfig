@@ -5,9 +5,6 @@ tags:
   projectName: ecs-test
 metrics:
   plugins:
-    - name: linux
-      enabled: true
-      interval: 30
     - name: jvmjolokia
       enabled: true
       interval: 300
@@ -17,14 +14,4 @@ metrics:
         port: 8778
         context: jolokia
         monitorDeadlocks: false
-        deadLockMonitoringInterval: 300       
-logging:
-  plugins:
-    - name: linux-syslog
-      enabled: true
-      config:
-        log_level:
-          - error
-          - warning
-          - info
-        log_path: /var/log/syslog,/var/log/auth.log,/var/log/messages,/var/log/secure
+        deadLockMonitoringInterval: 300
