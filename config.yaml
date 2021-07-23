@@ -9,15 +9,15 @@ metrics:
       enabled: true
       interval: 30
     - name: jvmjolokia
-        enabled: true
-        interval: 300
-        config:
-          ip: 127.0.0.1
-          protocol: http
-          port: 8778
-          context: jolokia
-          monitorDeadlocks: false
-          deadLockMonitoringInterval: 300       
+      enabled: true
+      interval: 300
+      config:
+        ip: 127.0.0.1
+        protocol: http
+        port: 8778
+        context: jolokia
+        monitorDeadlocks: false
+        deadLockMonitoringInterval: 300       
 logging:
   plugins:
     - name: linux-syslog
