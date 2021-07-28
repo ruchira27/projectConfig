@@ -1,0 +1,16 @@
+key: LREOJ+sLttIUw1HFwN94Ggy+W1O6mRJfs3RRLnKJZxm27RtguNyVxcwwnf3Nmf5mUUyWJv/OvkFFvTOX0BVzFdiH0qNWUmv0E1AtcL/ssz5QXpQt6xetmBcIlhkbm8O3HiiVD1cv49OwNkTchuxi3dCdaTQeOwGwYkd70wUf2+tNkxtodC0KtEI2bk2rZaqsp+lFR8ZCuERZcWTC8/rmBlPOTjnA3awMt8J3LOjnVRD4f375SdUuiDS948i/ychRZiF52KAAkKRAOr2zmDDxncXeof8+3YMvyXVuMWUeq0HojTtX9K77qcHj/QNCkajNK8KgmsMPIFtx6vfr9kcbtBAX6q6RICKYd22evZlKZvRjBtm2tclCPTrUUom+EOaSUom+DWq1CNYAc9RxHM8BKdsKdtT2oWuMfkOWqp9bX3x11nHOG6H1k7EoV/G16JZrs6VpE6cxPTB7zGwpUNlpa+7qPYx7uMsJt+Z+R6CZKOIuQCfuyvtquCOPoVeDFfDKEsMIR67fgqY7U2+CXKBwMnQ/eQ62rk8B2VjBNZpqqJgeHM5wcvQV4iVWLitMlFk7YkZROn+5y5eerbHatF6oCF6xyvRyeSXAH28X4akfvURGmbxiiba3csqq0NzbPfHQ87KRjtab3jVjyaj2VnI4maIfYLsHxmXcMd/So7MydbM=
+tags:
+  Name: test
+  appName: test
+  projectName: test-2
+metrics:
+  plugins:
+    - name: statsd
+      enabled: true
+      config:
+        port: 8125
+        flushInterval: 10
+        ruleFile: '/opt/sfagent/rules.txt'
+es_index_without_suffix: false
+agent:
+  loglevel: debug
