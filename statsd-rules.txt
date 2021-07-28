@@ -1,0 +1,22 @@
+#OPTIONS
+#-----------------------
+# Default value is `None` i.e. no custom tags present.
+# TAGTYPE = Datadog
+#       - Sample metric: cpuUtil:35|c|#_tag_appName:testApp1,_tag_projectName:apmProject,_documentType:cpuStats
+# TAGTYPE = Influx
+#       - Sample metric: cpuUtil,_tag_appName=testApp1,_tag_projectName=apmProject,_documentType=cpuStats:35|c
+# TAGTYPE = Graphite
+#       - Sample metric: cpuUtil;_tag_appName=testApp1;_tag_projectName=apmProject;_documentType=cpuStats:35|c
+TAGTYPE = None
+
+
+# SUPPORTED DATATYPES:  float, double, interger, short, long
+
+worker = NESTED(namespace: production, prefix: worker, key: worker_name, metric:[processing_time:double, success:float])
+workerQueues = NESTED(namespace: production, prefix: worker.queues, key: queue_name, metric:[runtime:double, processing:float, enqueued:float, latency:float])
+enqueuedJobs = FLAT(namespace: production, prefix: worker, metric: enqueued:integer)
+retrySetSize = FLAT(namespace: production, prefix: worker, metric: retry_set_size:integer)
+processedJobs = FLAT(namespace: production, prefix: worker, metric: processed:integer)
+failedJobs = FLAT(namespace: production, prefix: worker, metric: failed:integer)
+
+RENDER(_documentType: sidekiq,  worker, workerQueues, processedJobs, enqueuedJobs, retrySetSize, failedJobs)
